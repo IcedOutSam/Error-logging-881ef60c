@@ -24,9 +24,8 @@ function countDown($cijfer)
 
 try {
     countDown($cijfer);
-}
-catch (Exception $e) {
-    error_log($e, $cijfer, "errors.log");
+} catch (Exception $e) {
     echo "Cijfer zat niet tussen 1 en 10";
+    error_log($e, $cijfer, "errors.log");
 }
 ?>
