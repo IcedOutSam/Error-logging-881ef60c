@@ -17,7 +17,7 @@
 $cijfer = $_POST["name"];
 function countDown($cijfer)
 {
-    if ($cijfer > 10 || $cijfer <= 1) {
+    if ($cijfer > 9 || $cijfer <= 2) {
         throw new Exception("Cijfer moet tussen de 1 en 10 zitten");
     }
 }
@@ -26,6 +26,7 @@ try {
     countDown($cijfer);
 }
 catch (Exception $e) {
+    error_log($e, $cijfer, "errors.log");
     echo "Cijfer zat niet tussen 1 en 10";
 }
 ?>
